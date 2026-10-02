@@ -1,0 +1,26 @@
+[project]
+name = "eq_solver"
+version = "0.1.0"
+description = "Spatial SIRD toy model: ODE, discrete-time, and hybrid approaches with calibration"
+requires-python = ">=3.11"
+dependencies = [
+    "jax",
+    "diffrax",
+    "optimistix",
+    "optax",
+    "numpy",
+    "matplotlib",
+]
+
+[project.scripts]
+eq_solver = "eq_solver.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

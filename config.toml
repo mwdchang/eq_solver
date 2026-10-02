@@ -1,0 +1,26 @@
+[grid]
+rows = 2
+cols = 2
+
+[initial]
+population = 1000                              # per cell; may also be a grid
+infected   = { cell = [0, 0], count = 10 }
+
+[params]
+# value: true value used by simulate / make-data
+# guess: starting point for calibrate (single value or grid)
+# bounds: allowed range during calibrate
+# Per-cell values use the layout [[row0], [row1], ...], i.e. value[row][col]
+infection_rate     = { value = [[0.30, 0.20], [0.80, 0.15]], guess = 0.2,  bounds = [0.05, 1.0] }
+reinfection_factor = { value = [[0.20, 0.10], [0.80, 0.05]], guess = 0.5,  bounds = [0.0, 1.0] }
+
+recovery_rate      = { value = 0.1,  guess = 0.15, bounds = [0.01, 0.5] }
+death_rate         = { value = 0.01, guess = 0.02, bounds = [0.0, 0.1] }
+movement_rate      = { value = 0.05, guess = 0.1,  bounds = [0.0, 0.5] }
+
+
+
+
+# infection_rate     = { value = [[0.30, 0.20], [0.40, 0.15]], guess = 0.2,  bounds = [0.05, 1.0] }
+# reinfection_factor = { value = [[0.20, 0.10], [0.30, 0.05]], guess = 0.5,  bounds = [0.0, 1.0] }
+
