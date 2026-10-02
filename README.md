@@ -1,4 +1,5 @@
 # eq_solver
+*A good 95% of this is built by coding agent, mostly this is a scaled-down experiment of population compartmental models with dispersals over a grid.*
 
 Spatial SIRD toy model on a grid, solved three ways (`ode`, `discrete`, `hybrid`),
 with synthetic data generation and parameter calibration. See `plan.md` for the
